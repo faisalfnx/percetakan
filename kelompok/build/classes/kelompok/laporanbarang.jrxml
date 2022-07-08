@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c68e1d72-2a7d-4dcb-8634-bcb372523f75">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from barang]]>
+	</queryString>
+	<field name="kode_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="nama_barang">
+		<groupExpression><![CDATA[$F{nama_barang}]]></groupExpression>
+	</group>
+	<group name="jenis_barang">
+		<groupExpression><![CDATA[$F{jenis_barang}]]></groupExpression>
+	</group>
+	<group name="harga">
+		<groupExpression><![CDATA[$F{harga}]]></groupExpression>
+	</group>
+	<group name="jumlah">
+		<groupExpression><![CDATA[$F{jumlah}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="204" y="0" width="112" height="18" uuid="26ecaaad-4d7c-4683-9ae7-20bdcc7cd9e5"/>
+				<text><![CDATA[Data Laporan Barang]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="0" width="75" height="20" uuid="80359c7d-4668-49dd-bb39-59270a102b44"/>
+				<text><![CDATA[kode_barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="176" height="20" uuid="86bc24b3-c6dc-46a0-8aeb-08730fec5467"/>
+				<text><![CDATA[nama_barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="0" width="100" height="20" uuid="49ad316a-a0e8-49f0-a108-250bd723090a"/>
+				<text><![CDATA[jenis_barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="100" height="20" uuid="da39e31c-72a3-45ff-996b-f43ce8537c92"/>
+				<text><![CDATA[harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="20" uuid="f65ce52b-558e-47a5-9934-e16c619b35af"/>
+				<text><![CDATA[jumlah]]></text>
+			</staticText>
+			<line>
+				<reportElement x="4" y="20" width="551" height="1" uuid="45b77f30-1d4a-42aa-8bba-e99957880994"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="0" width="75" height="20" uuid="a03522e3-6a19-4a91-b3b1-e42aef21637f"/>
+				<textFieldExpression><![CDATA[$F{kode_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="176" height="20" uuid="d2c9b14b-63a3-41f3-afc5-ea7ec70eee3f"/>
+				<textFieldExpression><![CDATA[$F{nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="0" width="100" height="20" uuid="d38c5eab-89e3-4154-9f35-7c48b041f6fb"/>
+				<textFieldExpression><![CDATA[$F{jenis_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="fc8b9685-4e4a-4aaa-8e9f-70f4d5dbb15d"/>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="100" height="20" uuid="9c1e50ce-237e-4891-b85d-61737f256bc2"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
